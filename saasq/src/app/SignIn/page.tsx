@@ -1,10 +1,14 @@
+import Image from "next/image";
+import Link from "next/link";
+
+
 export default function Signin() {
-    return(
+    return (
         <div className="bg-gray-100 min-h-screen flex items-center justify-center">
             <div className="max-w-md w-full p-8 bg-white shadow-lg rounded-lg mb-5">
                 <div className="flex justify-center  ">
                     {/* Replace 'your-logo.png' with the path to your logo */}
-                    <img src="./resources/23036889560.png" alt="Logo" className="h-36"/>
+                    <Image src="/resources/23036889560.png" alt="Logo" width={50} height={50} className="h-36" />
                 </div>
                 <p className="max-w-md text-center mb-4">MentorMind Studio</p>
                 <p className="text-3xl">Welcome Back!</p>
@@ -24,12 +28,15 @@ export default function Signin() {
                 </form>
                 <p className="text-2xl max-w-md text-center ">or</p>
                 <div className="max-w-md w-full flex flex-row justify-between mb-10">
-                <div className="w-1/3 ml-12"> <img className="h-12" src="./resources/google.png" alt="" /></div>
-                <div className="w-1/4 "> <img className="h-12" src="./resources/facebook.png" alt="" /></div>
+                    <div className="w-1/3 ml-12"> <Image className="h-12" src="/resources/google.png" width={50} height={50} alt="" /></div>
+                    <div className="w-1/4 "> <Image className="h-12" src="/resources/facebook.png" width={50} height={50} alt="" /></div>
                 </div>
                 <div className="max-w-md py-2">
-                        <label className="w-12 ">Don't have account ?</label><label htmlFor="" className="ml-12 text-blue-500 hover:text-blue-700"><a href="./Signup">Sign Up</a></label>
-                    </div>
+                    <label className="w-12 ">Don&apos;t have account ?</label>
+                    <label htmlFor="" className="ml-12 text-blue-500 hover:text-blue-700">
+                        <Link href="/signup">Sign Up</Link>
+                    </label>
+                </div>
             </div>
         </div>
     );
